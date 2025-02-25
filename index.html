@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Bootstrap Theme The Band</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #777;
+  }
+    .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            height:400PX;
+            display: block;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+  h3, h4 {
+    margin: 10px 0 30px 0;
+    letter-spacing: 10px;      
+    font-size: 20px;
+    color: #111;
+  }
+  .container {
+    padding: 80px 120px;
+  }
+  .person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+  }
+  .person:hover {
+    border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%); /* make all photos black and white */ 
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+  }
+  .carousel-caption h3 {
+    color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+    background: #2d2d30;
+    color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail p {
+    margin-top: 15px;
+    color: #555;
+  }
+  .btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+  }
+  .modal-header, h4, .close {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+  }
+  .modal-header, .modal-body {
+    padding: 40px 50px;
+  }
+  .nav-tabs li a {
+    color: #777;
+  }
+  #googleMap {
+    width: 100%;
+    height: 400px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }  
+  .navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+    color: #fff !important;
+  }
+  .navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+  .open .dropdown-toggle {
+    color: #fff;
+    background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+    color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+    background-color: red !important;
+  }
+  footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+  }
+  footer a {
+    color: #f5f5f5;
+  }
+  footer a:hover {
+    color: #777;
+    text-decoration: none;
+  }  
+  .form-control {
+    border-radius: 0;
+  }
+  textarea {
+    resize: none;
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    <img src="LOGO.png" width="40px"  >
+
+
+    </div>
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+         <li><a href="#myPage" style="margin-left:-950px; font-size:30px">ARK</a></li>
+        <li><a href="#myPage">HOME</a></li>
+
+        
+        <li><a href="#band">ABOUT</a></li>
+        <li><a href="#tour">PRODUCT</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#NEW">NEW MODEL</a></li>
+            <li><a href="#">Extras</a></li>
+            <li><a href="#">Media</a></li> 
+          </ul>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="https://images.unsplash.com/photo-1598299803204-b73796f43289?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2xvdGhpbmclMjBmYWN0b3J5fGVufDB8fDB8fHww" alt="New York" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>ARK</h3>
+          <p>We specialize Garment Manufactring</p>
+        </div>      
+      </div>
+
+      <div class="item">
+        <img src="https://img.freepik.com/free-photo/woman-tailor-working-sewing-factory_1303-15837.jpg?t=st=1740463183~exp=1740466783~hmac=e3e8e3390e65d88c34e287a78aa40bdf3935ac11713fd86544cc13c58c15305a&w=996"" alt="Chicago" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>ARK</h3>
+          <p>We specialize Garment Manufactring</p>
+        </div>      
+      </div>
+
+    
+      <div class="item">
+        <img src="https://plus.unsplash.com/premium_photo-1677695581626-2a75bdece138?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODV8fGNsb3RoaW5nJTIwZmFjdG9yeXxlbnwwfHwwfHx8MA%3D%3D" alt="Los Angeles" width="1200" height="700">
+        <div class="carousel-caption">
+           <h3>ARK</h3>
+          <p>We specialize Garment Manufactring</p>
+        </div>      
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+
+ <div class="row" id="NEW">
+    <div class="col-sm-4">
+      <p class="text-center"><strong>SLEEVELES</strong></p><br>
+      <a href="#demo" data-toggle="collapse">
+        <img src="https://assets.ajio.com/medias/sys_master/root/20240812/N7Ed/66ba23056f60443f31018061/-473Wx593H-442600230-white-MODEL2.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+     
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong>HOODES</strong></p><br>
+      <a href="#demo2" data-toggle="collapse">
+        <img src="https://image.hm.com/assets/hm/5c/8c/5c8c2678da760d6ac7f3748848aaefe579f78a47.jpg?imwidth=384" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+     
+    </div>
+    <div class="col-sm-4">
+      <p class="text-center"><strong>SLEEVELES</strong></p><br>
+      <a href="#demo" data-toggle="collapse">
+        <img src="https://assets.ajio.com/medias/sys_master/root/20240812/qmQl/66ba211d1d763220fa73188b/-473Wx593H-442600230-black-MODEL2.jpg" class="img-circle person" alt="Random Name" width="255" height="255">
+      </a>
+     
+    </div>
+  </div>
+</div>
+ <div id="band" class="container text-center">
+
+    <h1>About Us – ARK Garment Manufacturing Industries Ltd.</h1>
+    <p>Welcome to <strong>ARK Garment Manufacturing Industries Ltd.</strong>, a leading garment manufacturer and exporter with over <strong>30 years of experience</strong>. Established in <strong>1995 in Sharjah, UAE</strong>, we have grown into a trusted global supplier of high-quality apparel, serving markets worldwide.</p>
+
+    <h2>Who We Are</h2>
+    <p>As a premier <strong>garment manufacturing and exporting company</strong>, we specialize in producing a wide range of clothing, from casual and formal wear to industrial uniforms. Our dedication to quality, innovation, and sustainability has made us a preferred choice for international brands, retailers, and corporate clients.</p>
+
+    <h2>What We Do</h2>
+    <h3>Garment Manufacturing & Exporting</h3>
+    <p>We produce and export high-quality apparel tailored to international fashion and industrial standards.</p>
+
+    <h3>Private Label & Customization</h3>
+    <p>We offer custom clothing solutions for global brands, ensuring top-tier fabrics, modern designs, and impeccable stitching.</p>
+
+    <h3>Sustainable & Ethical Production</h3>
+    <p>Our manufacturing processes prioritize sustainability, eco-friendly materials, and fair labor practices.</p>
+
+    <h3>Stringent Quality Control</h3>
+    <p>Every garment undergoes rigorous quality checks before export, ensuring durability and premium craftsmanship.</p>
+
+    <h2>Why Choose ARK Garment Manufacturing Industries Ltd.?</h2>
+    <ul>
+        <li><strong>✔ 30+ Years of Industry Experience</strong></li>
+        <li><strong>✔ Based in Sharjah, UAE – Exporting Since 1995</strong></li>
+        <li><strong>✔ Premium Fabrics & Advanced Manufacturing Technologies</strong></li>
+        <li><strong>✔ Custom Apparel Design & Large-Scale Production</strong></li>
+        <li><strong>✔ Sustainable & Ethical Business Practices</strong></li>
+        <li><strong>✔ Competitive Pricing & Timely Global Deliveries</strong></li>
+    </ul>
+
+    <p>At <strong>ARK Garment Manufacturing Industries Ltd.</strong>, we take pride in our long-standing expertise and commitment to delivering <strong>top-quality apparel</strong> to international clients. Our passion for excellence drives us to continuously innovate and meet the ever-changing demands of the fashion and garment industry.</p>
+
+ 
+
+ 
+</div>
+
+
+ 
+<!-- Container (TOUR Section) -->
+<div id="tour" class="bg-1">
+  <div class="container">
+    <h3 class="text-center">PRODUCTS</h3>
+   <div class="gallery">
+        <img src="https://image.hm.com/assets/hm/c1/cf/c1cfe682a63f511a89b90db7e7f3bc33617a4d29.jpg?imwidth=1536" alt="Image 1">
+        <img src="https://image.hm.com/assets/hm/79/4a/794ab8839bda40e7b00f552a1d5deab1cd280ded.jpg?imwidth=384" alt="Image 2">
+        <img src="https://i.pinimg.com/736x/01/c8/97/01c89705189ef6bf64b0f5cb374240d4.jpg" alt="Image 3" >
+        <img src="https://nolabels.in/cdn/shop/files/DSC00960_6fc63283-9bf2-465a-b0ec-fbe6f51683eb.jpg?v=1728371703&width=1080" alt="Image 4">
+        <img src="https://atlanticsportswear.com/wp-content/uploads/2019/01/NIKE-AQ3496.jpg" alt="Image 5">
+        <img src="https://assets.ajio.com/medias/sys_master/root/20231006/uGY7/65200a08afa4cf41f52e0fd0/-473Wx593H-466679697-green-MODEL.jpg" alt="Image 6">
+    </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h4><span class="glyphicon glyphicon-lock"></span> Tickets</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> Tickets, $23 per person</label>
+              <input type="number" class="form-control" id="psw" placeholder="How many?">
+            </div>
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Send To</label>
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+            </div>
+              <button type="submit" class="btn btn-block">Pay 
+                <span class="glyphicon glyphicon-ok"></span>
+              </button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove"></span> Cancel
+          </button>
+          <p>Need <a href="#">help?</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container">
+  <h3 class="text-center">Contact</h3>
+  <p class="text-center"><em>We love our fans!</em></p>
+
+  <div class="row">
+    <div class="col-md-4">
+      <p>Fan? Drop a note.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span>Chicago, US</p>
+      <p><span class="glyphicon glyphicon-phone"></span>Phone: +00 1515151515</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>Email: mail@mail.com</p>
+    </div>
+    <div class="col-md-8">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+      <br>
+      <div class="row">
+        <div class="col-md-12 form-group">
+          <button class="btn pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+
+
+
+  <p>@ 2025 ARK GARMENTS MANUFACTURING INDUSTRIES CO.LTD ALL RIGHT  RESERVED</p>  
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+</body>
+</html>
